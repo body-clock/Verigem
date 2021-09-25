@@ -3,7 +3,12 @@
     <Appraisal
       v-for="appraisal in allAppraisals"
       :key="appraisal.id"
-      :title="appraisal.title"
+      :brand="appraisal.brand"
+      :item_type="appraisal.item_type"
+      :client_notes="appraisal.client_notes"
+      :appraiser_notes="appraisal.appraiser_notes"
+      :status="appraisal.status"
+      :decision="appraisal.decision"
       ></Appraisal>
   </div>
 </template>

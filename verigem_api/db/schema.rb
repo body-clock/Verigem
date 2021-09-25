@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_23_154720) do
+ActiveRecord::Schema.define(version: 2021_09_25_185646) do
 
   create_table "appraisals", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.boolean "completed"
+    t.string "brand"
+    t.string "item_type"
+    t.string "client_notes"
+    t.string "appraiser_notes"
+    t.string "status"
+    t.string "decision"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

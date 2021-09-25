@@ -6,8 +6,9 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ title }}</h5>
-          <span class="badge rounded-pill bg-success">Complete</span>
+          <h5 class="card-title">{{ brand }} {{ item_type }}</h5>
+          <span class="badge rounded-pill bg-success" v-if="status === 'Complete'">{{ status }}</span>
+          <span class="badge rounded-pill bg-warning" v-if="status === 'Pending'">{{ status }}</span>
         </div>
       </div>
     </div>
@@ -16,8 +17,17 @@
 
 <script>
 export default {
-  props: ['title'],
-  name: "Appraisal"
+  props: ['brand', 'item_type', 'client_notes', 'appraiser_notes', 'status', 'decision'],
+  name: "Appraisal",
+  methods: {
+    badgeColor() {
+      if (status === 'Pending') {
+        return 'bg-warning'
+      } else if (status === 'Complete') {
+        return 'bg-success'
+      }
+    }
+  }
 }
 </script>
 
