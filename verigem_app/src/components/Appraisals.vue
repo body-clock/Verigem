@@ -1,12 +1,5 @@
 <template>
   <div class="appraisals">
-<!--    <div-->
-<!--        v-for="appraisal in allAppraisals"-->
-<!--        :key="appraisal.id"-->
-<!--        v-bind:class="{'is-complete':appraisal.completed}"-->
-<!--        class="appraisal">-->
-<!--      {{ appraisal.title }}-->
-<!--    </div>-->
     <Appraisal
       v-for="appraisal in allAppraisals"
       :key="appraisal.id"
@@ -38,5 +31,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .appraisals {
+    display: flex;
+    justify-content: center;
+  }
 </style>
