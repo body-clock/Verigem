@@ -4,7 +4,7 @@
       <h1>Appraisal Manager</h1>
       <Actions />
       <Appraisals />
-      <AppraisalForm />
+      <AppraisalModal />
     </div>
   </div>
 </template>
@@ -12,12 +12,12 @@
 <script>
 import Actions from '@/components/Actions';
 import Appraisals from '@/components/Appraisals.vue';
-import AppraisalForm from '@/components/AppraisalForm';
+import AppraisalModal from '@/components/AppraisalModal';
 
 export default {
   name: "App",
   components: {
-    AppraisalForm,
+    AppraisalModal,
     Actions,
     Appraisals
   },

@@ -18,7 +18,7 @@ class Api::V1::AppraisalsController < ApplicationController
     @appraisal = Appraisal.new(appraisal_params)
 
     if @appraisal.save
-      render json: @appraisal, status: :created, location: @appraisal
+      render json: @appraisal, status: :created, location: api_v1_appraisals_path(@appraisal)
     else
       render json: @appraisal.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class Api::V1::AppraisalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appraisal_params
-      params.require(:appraisal).permit(:title, :description, :completed)
+      params.require(:appraisal).permit(:brand, :item_type, :client_notes, :status)
     end
 end

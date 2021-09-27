@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-3 mt-3" style="max-width: 540px;">
+  <div class="card mt-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="@/assets/rolex.jpg" class="img-fluid rounded-start" alt="...">
@@ -18,16 +18,7 @@
 <script>
 export default {
   props: ['brand', 'item_type', 'client_notes', 'appraiser_notes', 'status', 'decision'],
-  name: "Appraisal",
-  methods: {
-    badgeColor() {
-      if (status === 'Pending') {
-        return 'bg-warning'
-      } else if (status === 'Complete') {
-        return 'bg-success'
-      }
-    }
-  }
+  name: "Appraisal"
 }
 </script>
 
